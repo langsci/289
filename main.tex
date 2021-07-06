@@ -1,0 +1,62 @@
+\documentclass[output=book,nobabel,
+  colorlinks,citecolor=brown,
+%  draft,draftmode,
+%  showindex,
+		  ]{langscibook}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          additional packages                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\addbibresource{localbibliography.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Frontmatter                      %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\input{localcommands.tex}
+
+\maketitle
+\frontmatter
+
+% \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
+{\sloppy\tableofcontents}
+%  \include{chapters/preface}
+\include{chapters/acknowledgements}
+%  \include{chapters/abbreviations}
+
+
+\include{chapters/transliteration}
+\include{chapters/0-INTRO}
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Chapters                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{chapters/1-CM}
+\include{chapters/2-UBL}
+\include{chapters/3-RuDe}
+\include{chapters/4-NP}
+\include{chapters/5-PP}
+\include{chapters/6-PL}
+\include{chapters/7-CONC}
+
+%\pagestyle{appendix}
+%\include{chapters/9-APP-IV}
+%\include{chapters/9-APP-V}
+%\include{chapters/9-APP-VI}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%             Backmatter                       %%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \input{localseealso.tex}
+\input{backmatter.tex}
+
+\end{document}
